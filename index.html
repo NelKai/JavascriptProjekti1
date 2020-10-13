@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Projekti 1</title>
+
+    <style>
+        #liikuntaTaulu, th, td {
+            border: 1px solid black;
+            padding: 10px;
+            border-collapse: collapse;
+        }
+    </style>
+
+    <script src="projekti1.js"></script>
+
+</head>
+
+<body>
+
+    <form>
+    <table id="liikuntaTaulu">
+        <tr>
+            <td></td>
+            <th>Maanantai</th>
+            <th>Tiistai</th>
+            <th>Keskiviikko</th>
+            <th>Torstai</th>
+            <th>Perjantai</th>
+            <th>Lauantai</th>
+            <th>Sunnuntai</th>
+            <th>Yhteensä</th>
+        </tr>
+        <tr>
+            <th scope="row" name="gym">Kuntosali</th>
+            <td><input type="text" name="textfield_1" value="esim. 1 tunti" /></td>
+            <td><input type="text" name="textfield_2" /></td>
+            <td><input type="text" name="textfield_3" /></td>
+            <td><input type="text" name="textfield_4" /></td>
+            <td><input type="text" name="textfield_5" /></td>
+            <td><input type="text" name="textfield_6" /></td>
+            <td><input type="text" name="textfield_7" /></td>
+            <td name="yhteensä_1" onblur="summa()"></td>
+        </tr>
+        <tr>
+            <th scope="row" name="swimming">Uinti</th>
+            <td><input type="text" name="textfield_8" /></td>
+            <td><input type="text" name="textfield_9" /></td>
+            <td><input type="text" name="textfield_10" /></td>
+            <td><input type="text" name="textfield_11" /></td>
+            <td><input type="text" name="textfield_12" /></td>
+            <td><input type="text" name="textfield_13" /></td>
+            <td><input type="text" name="textfield_14" /></td>
+            <td name="yhteensä_2"></td>
+        </tr>
+        <tr>
+            <th scope="row" name="football">Jalkapallo</th>
+            <td><input type="text" name="textfield_15" /></td>
+            <td><input type="text" name="textfield_16" /></td>
+            <td><input type="text" name="textfield_17" /></td>
+            <td><input type="text" name="textfield_18" /></td>
+            <td><input type="text" name="textfield_19" /></td>
+            <td><input type="text" name="textfield_20" /></td>
+            <td><input type="text" name="textfield_21" /></td>
+            <td name="yhteensä_3"></td>
+        </tr>
+        <tr>
+            <th scope="row" name="yoga">Jooga</th>
+            <td><input type="text" name="textfield_22" /></td>
+            <td><input type="text" name="textfield_23" /></td>
+            <td><input type="text" name="textfield_24" /></td>
+            <td><input type="text" name="textfield_25" /></td>
+            <td><input type="text" name="textfield_26" /></td>
+            <td><input type="text" name="textfield_27" /></td>
+            <td><input type="text" name="textfield_28" /></td>
+            <td name="yhteensä_4"></td>
+        </tr>
+    </table>
+
+    </form>
+</body>
+
+</html>
