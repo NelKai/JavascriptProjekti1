@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+ul, li {
+    list-style-type: none;
+    padding: 3px 3px 3px 3px;
+    background: white;
+    text-align: center;
+} 
+
+ul {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+}
+
+ul, li:hover {
+    background: #76D7C4;
+}
+
+#addButton {
+    padding: 5px 5px;
+    background: #D0ECE7;
+}
+
+#addButton:hover {
+    background: #73C6B6;
+}
+
+#toDoForm {
+    text-align: center;
+}
+
+#listArea {
+    text-align: center;
+}
+
+#toDoList {
+    position: absolute;
+    left: 25%;
+}
