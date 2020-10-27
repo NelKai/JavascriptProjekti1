@@ -1,8 +1,8 @@
 function addItem() {
     var inputTxt = document.forms.toDoForm.item.value;
 
-    // Tapahtumateksti
-
+    // Tapahtumateksti, joka kertoo onnistuiko lisäys
+    
     var eventText = document.createElement('p');
     eventText.style.color = "green";
     eventText.innerHTML = "Tehtävä lisätty onnistuneesti.";
