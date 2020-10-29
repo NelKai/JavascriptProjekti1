@@ -23,24 +23,45 @@ ul, li:hover {
     background: #76D7C4;
 }
 
-#addButton {
-    padding: 5px 5px;
+#lisaaNappi, #naytaNappi, #tyhjennysNappi {
+    padding: 3px 3px;
     background: #D0ECE7;
+    border-radius: 5px;
 }
 
-#addButton:hover {
+#lisaaNappi:hover, #naytaNappi:hover, #tyhjennysNappi:hover {
     background: #73C6B6;
 }
 
-#toDoForm {
+#toDoLomake {
     text-align: center;
 }
 
-#listArea {
-    text-align: center;
+#lomakeAlue {
+    border-radius: 25px;
+    border: 2px solid #73C6B6;
 }
 
-#toDoList {
+#toDoLista {
     position: absolute;
     left: 25%;
+}
+
+.cbox {
+    float: left;
+}
+
+input[type='checkbox']:checked+label {
+    text-decoration: line-through;
+    color: grey;
+}
+
+.poistoNappi {
+    background: #D0ECE7;
+    float: right;
+    border-radius: 5px;
+}
+
+.poistoNappi:hover {
+    background: #73C6B6;
 }

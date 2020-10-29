@@ -1,41 +1,34 @@
 <!DOCTYPE html>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Projekti 1</title>
+<html>
 
-    <link rel="stylesheet" href="styles.css"/>
-    <script src="projekti1.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <title>Projekti 1</title>
+        <link rel="stylesheet" href="styles.css">
 
-</head>
+    </head>
 
-<body>
-    <h1>TO-DO -lista</h1>
+    <body onload="lataaLista()">
 
-    <!--Lomake, joka pyytää käyttäjältä listaan lisättävän tehtävän-->
+        <h1>TO-DO -lista</h1>
 
-    <form action="" id="toDoForm">
-        <fieldset>
-            <p>Rakenna oma to-do -listasi!</p>
-            <div>
-                <input type="text" id="item" required></input>
-                <input type="button" value="Lisää" id="addButton" onclick="addItem()"></input>
-            </div>
-            
-        </fieldset>
-    </form>
-    
-    <!--Lista, johon tehtävät tulevat-->
+        <form action="" id="toDoLomake"> 
+            <fieldset id="lomakeAlue"> 
+                <p>Rakenna oma to-do -listasi!</p>
+                <input type="text" id="input" placeholder="Syötä tehtävä">
+                <input type="button" value="Lisää" id="lisaaNappi" onclick="lisaaTeht()"> 
+                <input type="button" value="Näytä lista" id="naytaNappi" onclick="naytaLista()"> 
+                <input type="button" value="Tyhjennä lista" id="tyhjennysNappi" onclick="tyhjennaLista()"> 
+            </fieldset>
+        </form>
+        <div>
+            <ul id="toDoLista"> 
 
-    <div id="listArea">
-        <h2>Mitä pitäisi tehdä:</h2>
-        <ul id="toDoList">
+            </ul>
+        </div>
         
-        </ul>
+        <script src="yritys2.js"></script>
 
-    </div>
-
-
-</body>
-
+    </body>
 </html>
