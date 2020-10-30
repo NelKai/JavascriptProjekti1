@@ -3,7 +3,7 @@
 var tapahtumaTeksti = document.createElement('p');
 var tapahtumaTeksti_paikka = document.getElementsByTagName('p');
 
-// Luetaan käyttäjän syötöt ja tallenetaan ne taulukkoon / localstorageen
+// Luetaan käyttäjän syötöt ja tallennetaan ne taulukkoon / localstorageen
 function lisaaTeht() {
     var syotto = document.getElementById('input').value;
     var listaTaulukko = lataaLista(); // Tuodaan lataaLista-funktiosta taulukon arvot
@@ -40,10 +40,9 @@ function poistaTeht() {
 // Tyhjennetään koko lista kerrallaan
 function tyhjennaLista() {
     var listaTaulukko = lataaLista();
-
     tapahtumaTeksti_paikka[0].appendChild(tapahtumaTeksti);
 
-    // Tarkistetaan onko lista tyhjä vai ei ja päivitetään tapahtumateksti
+    // Tarkistetaan onko lista jo tyhjä vai ei 
     if (listaTaulukko.length > 0) {
         localStorage.clear();
         tapahtumaTeksti.style.color = "green";
@@ -73,7 +72,7 @@ function luoLista() {
     }
 }
 
-// Näytetään listassa jo olevat tehtävät napin painalluksella ja päivitetään tapahtumateksti
+// Näytetään listassa jo olevat, tallennetut tehtävät napin painalluksella
 function naytaLista() {
     var listaTaulukko = lataaLista();
     tapahtumaTeksti_paikka[0].appendChild(tapahtumaTeksti);
@@ -89,13 +88,13 @@ function naytaLista() {
 // Ladataan localstoragesta arvot ja tallennetaan taulukkoon
 function lataaLista() {
     var listaTaulukko = []; // Luodaan taulukko, johon arvot tallennetaan
-    var haetutTeht = localStorage.getItem('listaJasen'); // Haetaan arvoja localstoragesta
+    var haetutTeht = localStorage.getItem('listaJasen'); // Haetaan tallennettuja arvoja localstoragesta
 
     // Tarkistetaan onko localstoragessa mitään, jos on tallennetaan siellä olevat arvot taulukkoon
     if (haetutTeht == null) {
         console.log("Mitään ei ole tallennettu.");
     } else {
-         listaTaulukko = JSON.parse(haetutTeht);
+        listaTaulukko = JSON.parse(haetutTeht);
     }
 
     return listaTaulukko; // Palautetaan taulukko muiden funktioiden käytettäväksi
